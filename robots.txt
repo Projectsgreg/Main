@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /cgi-bin/
+
+Crawl-delay: 2
+
+Sitemap: https://gregoryswarnenterprises.com/sitemap.xml
+
+# Domain priority
+Host: https://gregoryswarnenterprises.com
