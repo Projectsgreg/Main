@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Gregory Swarn | Book Coaching Consultation</title>
+    
+    <meta name="description" content="Contact Gregory Swarn for performance coaching, speaking engagements, or corporate programs. Book your discovery call today.">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="media/logos/favicon.ico">
+    
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+</head>
+<body class="coaching-theme">
+    
+    <!-- Header -->
+    <header class="coaching-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                Gregory Swarn <span>Performance Coaching</span>
+            </a>
+            
+            <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+            
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="coaching.html">Coaching</a>
+                <a href="membership.html">Membership</a>
+                <a href="podcast.html">Podcast</a>
+                <a href="blog.html">Insights</a>
+                <a href="contact.html" class="active btn-consultation">Book Consultation</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="coaching-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Let's Transform<br>Your Performance</h1>
+                <p class="hero-subtitle">Begin your journey with a complimentary discovery call. Explore how integrated coaching can elevate your leadership, business, and well-being.</p>
+                
+                <div class="hero-cta">
+                    <a href="#booking" class="btn btn-primary btn-large">
+                        Book Discovery Call →
+                    </a>
+                    <a href="#contact-form" class="btn btn-secondary">
+                        Send Message
+                    </a>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="info-item">
+                        <strong>📧 Email</strong>
+                        <p>contact@gregoryswarnenterprises.com</p>
+                    </div>
+                    <div class="info-item">
+                        <strong>📞 Phone</strong>
+                        <p>+1 (555) 123-4567</p>
+                    </div>
+                    <div class="info-item">
+                        <strong>🕒 Hours</strong>
+                        <p>Mon-Fri, 9am-6pm EST</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="coach-image">
+                <img src="media/greg/greg-6.jpg" alt="Gregory Swarn Consultation" width="600" height="600" loading="eager">
+                <div class="coach-bio">
+                    <h4>Direct Consultation</h4>
+                    <p>Gregory Swarn</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="section booking-section">
+        <div class="container">
+            <h2>Book Your Discovery Call</h2>
+            <p class="section-intro">30-minute complimentary conversation to explore your goals and our approach.</p>
+            
+            <div id="booking-widget">
+                <!-- Populated by booking-system.js -->
+            </div>
+            
+            <div class="booking-process">
+                <h3>The Discovery Process</h3>
+                <div class="process-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h4>Schedule Your Call</h4>
+                        <p>Select a convenient time for your 30-minute discovery session.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h4>Initial Conversation</h4>
+                        <p>Discuss your current situation, goals, and challenges.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h4>Explore Fit & Options</h4>
+                        <p>Determine if coaching is right for you and explore program options.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h4>Next Steps</h4>
+                        <p>Receive personalized recommendations and action steps.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact-form" class="section form-section">
+        <div class="container">
+            <h2>Send a Message</h2>
+            <p class="section-intro">For general inquiries, speaking requests, or corporate programs.</p>
+            
+            <div class="form-container">
+                <form id="contactForm" class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company/Organization</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="inquiry-type">Inquiry Type *</label>
+                        <select id="inquiry-type" name="inquiry_type" required>
+                            <option value="">Select an option</option>
+                            <option value="coaching">Coaching Inquiry</option>
+                            <option value="corporate">Corporate Program</option>
+                            <option value="speaking">Speaking Engagement</option>
+                            <option value="partnership">Partnership Opportunity</option>
+                            <option value="media">Media/Press Inquiry</option>
+                            <option value="general">General Question</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Your Message *</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Please include relevant details about your situation, goals, and timeline..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="goals">Primary Goals & Challenges</label>
+                        <textarea id="goals" name="goals" rows="3" placeholder="What are you hoping to achieve? What challenges are you currently facing?"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="timeline">Preferred Timeline</label>
+                        <select id="timeline" name="timeline">
+                            <option value="">Select timeline</option>
+                            <option value="immediate">Immediate (Within 1 month)</option>
+                            <option value="short-term">Short-term (1-3 months)</option>
+                            <option value="planning">Planning Stage (3-6 months)</option>
+                            <option value="future">Future Consideration (6+ months)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="referral">How did you hear about us?</label>
+                        <select id="referral" name="referral">
+                            <option value="">Select option</option>
+                            <option value="podcast">Podcast</option>
+                            <option value="youtube">YouTube</option>
+                            <option value="linkedin">LinkedIn</option>
+                            <option value="referral">Client Referral</option>
+                            <option value="search">Search Engine</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="privacy" name="privacy" required>
+                        <label for="privacy">
+                            I agree to the <a href="legal/privacy.html" target="_blank">Privacy Policy</a> and understand that my information will be handled securely.
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-large">
+                        Send Message →
+                    </button>
+                    
+                    <p class="form-note">
+                        We respond to all inquiries within 24-48 hours during business hours.
+                    </p>
+                </form>
+                
+                <div class="form-sidebar">
+                    <h3>Other Ways to Connect</h3>
+                    
+                    <div class="contact-methods">
+                        <div class="method">
+                            <div class="method-icon">📧</div>
+                            <div class="method-info">
+                                <strong>Email Directly</strong>
+                                <p>coaching@gregoryswarnenterprises.com</p>
+                                <p>For direct coaching inquiries</p>
+                            </div>
+                        </div>
+                        
+                        <div class="method">
+                            <div class="method-icon">💼</div>
+                            <div class="method-info">
+                                <strong>Corporate Inquiries</strong>
+                                <p>corporate@gregoryswarnenterprises.com</p>
+                                <p>For team training and executive programs</p>
+                            </div>
+                        </div>
+                        
+                        <div class="method">
+                            <div class="method-icon">🎤</div>
+                            <div class="method-info">
+                                <strong>Speaking Requests</strong>
+                                <p>speaking@gregoryswarnenterprises.com</p>
+                                <p>For event speaking and workshops</p>
+                            </div>
+                        </div>
+                        
+                        <div class="method">
+                            <div class="method-icon">📍</div>
+                            <div class="method-info">
+                                <strong>Location</strong>
+                                <p>Based in New York City</p>
+                                <p>Available for in-person sessions globally</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="response-time">
+                        <h4>Response Time</h4>
+                        <ul>
+                            <li><strong>Coaching Inquiries:</strong> 24 hours</li>
+                            <li><strong>Corporate Programs:</strong> 48 hours</li>
+                            <li><strong>Speaking Requests:</strong> 72 hours</li>
+                            <li><strong>General Questions:</strong> 48 hours</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="emergency-contact">
+                        <h4>Urgent Matters</h4>
+                        <p>For urgent coaching inquiries, please call:</p>
+                        <p class="emergency-phone">+1 (555) 123-4567</p>
+                        <p><small>Available for scheduled clients only</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>How quickly will I hear back?</h3>
+                    <p>All inquiries receive an initial response within 24-48 hours during business hours (Monday-Friday, 9am-6pm EST).</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Is the discovery call really free?</h3>
+                    <p>Yes, the 30-minute discovery call is completely complimentary with no obligation to continue coaching.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>What should I prepare for the discovery call?</h3>
+                    <p>Think about your current goals, challenges, and what you hope to achieve through coaching. No formal preparation needed.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Do you work with international clients?</h3>
+                    <p>Yes, we work with clients globally via video conference. Sessions are scheduled according to your timezone.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>What's the investment for coaching?</h3>
+                    <p>Coaching programs range from $7,500 to $25,000 for 90-day engagements, depending on the program and level of support.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Can I book a single session?</h3>
+                    <p>While we focus on transformative 90-day engagements, single strategy sessions are available starting at $2,500.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-card">
+                <h2>Ready to Begin Your Transformation?</h2>
+                <p>Take the first step toward elevated performance, leadership, and impact.</p>
+                <div class="cta-actions">
+                    <a href="#booking" class="btn btn-primary btn-large">
+                        Book Discovery Call Now →
+                    </a>
+                    <a href="coaching.html" class="btn btn-secondary">
+                        Learn About Programs
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="coaching-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Contact & Booking</h4>
+                    <p>Begin your performance transformation today.</p>
+                    <div class="contact-details">
+                        <p>📧 contact@gregoryswarnenterprises.com</p>
+                        <p>📞 +1 (555) 123-4567</p>
+                        <p>📍 New York City, NY</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="#booking">Book Discovery Call</a>
+                    <a href="#contact-form">Send Message</a>
+                    <a href="coaching.html">Coaching Programs</a>
+                    <a href="membership.html">Membership</a>
+                    <a href="podcast.html">Podcast</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Business Hours</h4>
+                    <p>Monday - Friday: 9am - 6pm EST</p>
+                    <p>Weekends: By appointment only</p>
+                    <p>Holidays: Closed on major holidays</p>
+                    <p>Response Time: 24-48 hours</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/gregoryswarn" target="_blank">LinkedIn</a>
+                        <a href="https://twitter.com/gregoryswarn" target="_blank">Twitter</a>
+                        <a href="https://instagram.com/gregoryswarn" target="_blank">Instagram</a>
+                        <a href="https://youtube.com/@gregoryswarn" target="_blank">YouTube</a>
+                    </div>
+                    <p>Follow for daily insights and updates.</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© <span data-current-year>2024</span> Gregory Swarn Enterprises. All rights reserved.</p>
+                <p><a href="legal/terms.html">Terms of Service</a> | <a href="legal/privacy.html">Privacy Policy</a> | <a href="legal/disclaimer.html">Disclaimer</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="booking-system.js"></script>
+    <script src="form-integration.js"></script>
+    
+    <!-- Calendly -->
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    
+    <!-- Additional styles -->
+    <style>
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-lg);
+            margin-top: var(--space-xl);
+            padding-top: var(--space-lg);
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        .info-item strong {
+            display: block;
+            color: var(--primary-blue);
+            margin-bottom: 0.25rem;
+        }
+        
+        .booking-process {
+            margin-top: var(--space-xl);
+            padding-top: var(--space-lg);
+            border-top: 1px solid #eee;
+        }
+        
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-lg);
+            margin-top: var(--space-lg);
+        }
+        
+        .step {
+            text-align: center;
+            padding: var(--space-lg);
+            background: var(--light-bg);
+            border-radius: var(--radius);
+            position: relative;
+        }
+        
+        .step-number {
+            position: absolute;
+            top: -1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent-gold);
+            color: var(--primary-dark);
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+        
+        .form-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-xl);
+            margin-top: var(--space-lg);
+        }
+        
+        @media (min-width: 992px) {
+            .form-container {
+                grid-template-columns: 2fr 1fr;
+            }
+        }
+        
+        .contact-form {
+            background: white;
+            padding: var(--space-xl);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-md);
+        }
+        
+        @media (min-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        .form-sidebar {
+            background: var(--light-bg);
+            padding: var(--space-xl);
+            border-radius: var(--radius);
+        }
+        
+        .contact-methods {
+            margin-bottom: var(--space-xl);
+        }
+        
+        .method {
+            display: flex;
+            gap: var(--space-md);
+            margin-bottom: var(--space-lg);
+            align-items: flex-start;
+        }
+        
+        .method-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        .response-time ul {
+            list-style: none;
+            padding: 0;
+            margin-top: var(--space-md);
+        }
+        
+        .response-time li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .emergency-contact {
+            margin-top: var(--space-xl);
+            padding: var(--space-lg);
+            background: white;
+            border-radius: var(--radius);
+            text-align: center;
+        }
+        
+        .emergency-phone {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            margin: var(--space-sm) 0;
+        }
+        
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--space-lg);
+            margin-top: var(--space-xl);
+        }
+        
+        .faq-item {
+            background: white;
+            padding: var(--space-lg);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .faq-item h3 {
+            color: var(--primary-blue);
+            margin-bottom: var(--space-sm);
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-dark));
+            color: white;
+        }
+        
+        .cta-card {
+            text-align: center;
+            padding: var(--space-xl);
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .cta-card h2 {
+            color: white;
+        }
+        
+        .cta-actions {
+            display: flex;
+            gap: var(--space-md);
+            justify-content: center;
+            margin-top: var(--space-lg);
+            flex-wrap: wrap;
+        }
+        
+        .checkbox {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+        
+        .checkbox input[type="checkbox"] {
+            margin-top: 0.25rem;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+            
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</body>
+</html>
