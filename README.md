@@ -3,9 +3,6 @@
 ## 🎯 Mission
 Integrated performance coaching for visionary leaders, combining mind mastery, business excellence, and peak wellness.
 
-## 🌐 Live Website
-**Main Hub:** https://gregoryswarnenterprises.com
-
 ## 📁 Project Structure
 gregory-swarn-main/
 ├── index.html # Main landing page
