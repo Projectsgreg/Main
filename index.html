@@ -13,15 +13,64 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
     <link rel="icon" href="media/logo.png">
     
-    <!-- Font Awesome for professional icons -->
+    <!-- Font Awesome for better icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* Enhanced Social Icons */
-        .social-icons {
+        /* Portal Links in Header */
+        .portal-links {
             display: flex;
             gap: 1rem;
             margin-top: 1.5rem;
+        }
+        
+        .portal-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: rgba(218, 171, 58, 0.1);
+            border: 2px solid var(--accent-gold);
+            border-radius: 25px;
+            color: var(--accent-gold);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .portal-link:hover {
+            background: var(--accent-gold);
+            color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+        
+        .portal-link.business {
+            border-color: #2a4d8d;
+            color: #2a4d8d;
+            background: rgba(42, 77, 141, 0.1);
+        }
+        
+        .portal-link.business:hover {
+            background: #2a4d8d;
+            color: white;
+        }
+        
+        .portal-link.wellness {
+            border-color: #2d6a4f;
+            color: #2d6a4f;
+            background: rgba(45, 106, 79, 0.1);
+        }
+        
+        .portal-link.wellness:hover {
+            background: #2d6a4f;
+            color: white;
+        }
+        
+        /* Enhanced social icons */
+        .social-icons-grid {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
             justify-content: center;
         }
         
@@ -31,121 +80,25 @@
             justify-content: center;
             width: 44px;
             height: 44px;
-            background: linear-gradient(135deg, #1a508b, #0a1931);
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-dark));
             color: white;
             border-radius: 50%;
             font-size: 1.2rem;
             text-decoration: none;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(26, 80, 139, 0.2);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
         
         .social-icon:hover {
             transform: translateY(-3px) scale(1.1);
-            box-shadow: 0 8px 20px rgba(26, 80, 139, 0.3);
-            background: linear(135deg, #daab3a, #e6b637);
-            color: #0a1931;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
         }
         
-        /* Professional Portal Links */
-        .portal-links {
-            display: flex;
-            gap: 2rem;
-            justify-content: center;
-            margin: 2rem 0;
-            flex-wrap: wrap;
-        }
-        
-        .portal-link {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 1rem 1.5rem;
-            background: rgba(255, 255, 255, 0.1);
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            border-radius: 12px;
-            color: white;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        
-        .portal-link:hover {
-            background: rgba(218, 171, 58, 0.2);
-            border-color: #daab3a;
-            transform: translateY(-2px);
-        }
-        
-        .portal-icon {
-            font-size: 1.5rem;
-        }
-        
-        /* Enhanced Image Gallery */
-        .image-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin: 3rem 0;
-        }
-        
-        .gallery-image {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            border-radius: 16px;
-            transition: all 0.4s ease;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-        }
-        
-        .gallery-image:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-        }
-        
-        /* Enhanced Badges */
-        .authority-badges {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-        
-        .badge {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 16px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-            text-align: center;
-            transition: transform 0.3s ease;
-            border: 2px solid transparent;
-        }
-        
-        .badge:hover {
-            transform: translateY(-5px);
-            border-color: #daab3a;
-        }
-        
-        .badge strong {
-            display: block;
-            font-size: 2rem;
-            color: #daab3a;
-            margin-bottom: 0.5rem;
-            font-weight: 800;
-        }
-        
-        /* Enhanced Hero CTA */
-        .hero-cta {
-            display: flex;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        
-        @media (min-width: 992px) {
-            .hero-cta {
-                justify-content: flex-start;
-            }
-        }
+        .social-icon.youtube { background: linear-gradient(135deg, #FF0000, #CC0000); }
+        .social-icon.instagram { background: linear-gradient(135deg, #E4405F, #C13584); }
+        .social-icon.tiktok { background: linear-gradient(135deg, #000000, #25F4EE); }
+        .social-icon.twitter { background: linear-gradient(135deg, #1DA1F2, #0d8bd9); }
+        .social-icon.linkedin { background: linear-gradient(135deg, #0077B5, #005582); }
     </style>
 </head>
 <body>
@@ -164,6 +117,16 @@
                 <a href="#services">Services</a>
                 <a href="#results">Results</a>
                 <a href="#booking" class="btn-consultation">Book Call</a>
+                
+                <!-- Portal links in navigation -->
+                <div class="portal-links" style="display: flex; gap: 1rem; margin-left: 1rem;">
+                    <a href="https://greedforlifeinternational.com" target="_blank" class="portal-link business" style="font-size: 0.9rem;">
+                        <i class="fas fa-chart-line"></i> Business
+                    </a>
+                    <a href="https://maximizeforlifeinternational.com" target="_blank" class="portal-link wellness" style="font-size: 0.9rem;">
+                        <i class="fas fa-heartbeat"></i> Wellness
+                    </a>
+                </div>
             </nav>
         </div>
     </header>
@@ -175,12 +138,41 @@
                 <h1>Your Vision. Your Potential. Transformed.</h1>
                 <p class="hero-subtitle">Integrated performance coaching for visionary leaders ready to elevate their impact, revenue, and well-being.</p>
                 
+                <!-- Portal Links in Hero Section -->
+                <div class="portal-links">
+                    <a href="https://greedforlifeinternational.com" target="_blank" class="portal-link business">
+                        <i class="fas fa-briefcase"></i> Business Growth Portal
+                    </a>
+                    <a href="https://maximizeforlifeinternational.com" target="_blank" class="portal-link wellness">
+                        <i class="fas fa-spa"></i> Wellness Portal
+                    </a>
+                </div>
+                
                 <div class="hero-cta">
                     <a href="https://calendly.com/gregoryswarnenterprises/30min" target="_blank" class="btn btn-primary btn-large">
                         <i class="fas fa-calendar-check"></i> Book Discovery Call →
                     </a>
                     <a href="#services" class="btn btn-secondary">
-                        <i class="fas fa-chart-line"></i> View Services
+                        <i class="fas fa-eye"></i> View Services
+                    </a>
+                </div>
+                
+                <!-- Enhanced Social Icons in Hero -->
+                <div class="social-icons-grid">
+                    <a href="https://youtube.com/@greg-w8l" target="_blank" class="social-icon youtube" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://instagram.com/gregoryswarn" target="_blank" class="social-icon instagram" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://tiktok.com/@gregoryswarn" target="_blank" class="social-icon tiktok" aria-label="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="https://twitter.com/gregoryswarn" target="_blank" class="social-icon twitter" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/gregoryswarn" target="_blank" class="social-icon linkedin" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
                     </a>
                 </div>
                 
@@ -198,32 +190,13 @@
                         <span>Satisfaction Rate</span>
                     </div>
                 </div>
-                
-                <!-- Social Media Links -->
-                <div class="social-icons">
-                    <a href="https://youtube.com/@greg-w8l" target="_blank" class="social-icon" aria-label="YouTube">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                    <a href="https://instagram.com/gregoryswarn" target="_blank" class="social-icon" aria-label="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://tiktok.com/@gregoryswarn" target="_blank" class="social-icon" aria-label="TikTok">
-                        <i class="fab fa-tiktok"></i>
-                    </a>
-                    <a href="https://twitter.com/gregoryswarn" target="_blank" class="social-icon" aria-label="Twitter">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="https://linkedin.com/in/gregoryswarn" target="_blank" class="social-icon" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                </div>
             </div>
             
             <div class="coach-image">
                 <!-- Using greg-4.jpg as requested -->
                 <img src="media/greg/greg-4.jpg" alt="Gregory Swarn - Performance Coach" 
                      id="dynamic-hero"
-                     onerror="this.src='https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=800&auto=format&fit=crop&q=80&fit=facearea&facepad=3&w=600&h=600'">
+                     onerror="this.src='https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=800&auto=format&fit=crop&q=80'">
                 <div class="coach-bio">
                     <h4>Gregory Swarn</h4>
                     <p>Integrated Performance Coach</p>
@@ -243,18 +216,21 @@
                     <div class="pillar-icon"><i class="fas fa-brain"></i></div>
                     <h3>Mind Mastery</h3>
                     <p>Clarity, focus, and strategic thinking for decisive leadership and innovation.</p>
+                    <a href="https://greedforlifeinternational.com#leadership" target="_blank" class="btn-link">Business Strategy →</a>
                 </div>
                 
                 <div class="pillar-card">
-                    <div class="pillar-icon"><i class="fas fa-briefcase"></i></div>
+                    <div class="pillar-icon"><i class="fas fa-chart-line"></i></div>
                     <h3>Business Excellence</h3>
                     <p>Scalable systems, revenue growth, and sustainable business models.</p>
+                    <a href="https://greedforlifeinternational.com" target="_blank" class="btn-link">Visit Business Portal →</a>
                 </div>
                 
                 <div class="pillar-card">
-                    <div class="pillar-icon"><i class="fas fa-leaf"></i></div>
+                    <div class="pillar-icon"><i class="fas fa-heartbeat"></i></div>
                     <h3>Peak Wellness</h3>
                     <p>Sustainable energy, optimal health, and work-life integration.</p>
+                    <a href="https://maximizeforlifeinternational.com" target="_blank" class="btn-link">Visit Wellness Portal →</a>
                 </div>
             </div>
         </div>
@@ -293,7 +269,7 @@
                     <p>Team training, executive coaching, and organizational performance optimization.</p>
                     <div class="service-price">Custom</div>
                     <a href="mailto:contact@gregoryswarnenterprises.com?subject=Corporate%20Program%20Inquiry" class="btn btn-primary">
-                        <i class="fas fa-file-alt"></i> Get Proposal
+                        <i class="fas fa-file-contract"></i> Get Proposal
                     </a>
                 </div>
             </div>
@@ -311,35 +287,34 @@
                     <div class="benefit-icon"><i class="fas fa-chart-line"></i></div>
                     <h4>317% Revenue Growth</h4>
                     <p>Tech CEO scaled from $2M to $8.3M in 18 months</p>
+                    <a href="https://greedforlifeinternational.com#results" target="_blank" class="btn-link">View Business Results →</a>
                 </div>
                 
                 <div class="benefit-card">
                     <div class="benefit-icon"><i class="fas fa-bolt"></i></div>
                     <h4>42% Energy Increase</h4>
                     <p>Executive recovered from burnout to peak performance</p>
+                    <a href="https://maximizeforlifeinternational.com#transformations" target="_blank" class="btn-link">View Wellness Results →</a>
                 </div>
                 
                 <div class="benefit-card">
                     <div class="benefit-icon"><i class="fas fa-clock"></i></div>
                     <h4>15hrs Weekly Time Saved</h4>
                     <p>Entrepreneur regained work-life balance</p>
+                    <a href="https://maximizeforlifeinternational.com#routine" target="_blank" class="btn-link">Learn 5 AM Routine →</a>
                 </div>
             </div>
             
-            <!-- Enhanced Image Gallery -->
+            <!-- Image Gallery with better images -->
             <div class="image-gallery">
-                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&auto=format&fit=crop&q=80" 
-                     alt="Executive Strategy Meeting" class="gallery-image"
-                     loading="lazy">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&auto=format&fit=crop&q=80&fit=facearea&facepad=2" 
+                     alt="Executive Coaching Session" class="gallery-image">
                 <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&auto=format&fit=crop&q=80" 
-                     alt="Wellness Coaching Session" class="gallery-image"
-                     loading="lazy">
+                     alt="Wellness & Meditation" class="gallery-image">
                 <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&auto=format&fit=crop&q=80" 
-                     alt="Leadership Development Workshop" class="gallery-image"
-                     loading="lazy">
+                     alt="Leadership Development" class="gallery-image">
                 <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&auto=format&fit=crop&q=80" 
-                     alt="Team Success Celebration" class="gallery-image"
-                     loading="lazy">
+                     alt="Team Success & Strategy" class="gallery-image">
             </div>
         </div>
     </section>
@@ -350,10 +325,20 @@
             <h2>Begin Your Transformation</h2>
             <p class="section-intro">Start with a complimentary discovery call to explore your goals.</p>
             
+            <!-- Portal Links Section -->
+            <div class="portal-links" style="justify-content: center; margin-bottom: 3rem;">
+                <a href="https://greedforlifeinternational.com" target="_blank" class="portal-link business">
+                    <i class="fas fa-briefcase"></i> Need Business Growth? Visit Business Portal →
+                </a>
+                <a href="https://maximizeforlifeinternational.com" target="_blank" class="portal-link wellness">
+                    <i class="fas fa-spa"></i> Need Wellness? Visit Wellness Portal →
+                </a>
+            </div>
+            
             <div class="booking-options">
                 <div class="booking-card">
                     <h3><i class="fas fa-phone-alt"></i> Discovery Call</h3>
-                    <p>30-minute introductory conversation</p>
+                    <p>30-minute introductory conversation to explore fit and goals</p>
                     <div class="booking-price">FREE</div>
                     <a href="https://calendly.com/gregoryswarnenterprises/30min" target="_blank" class="btn btn-primary btn-large">
                         <i class="fas fa-calendar-check"></i> Schedule Now →
@@ -366,30 +351,6 @@
                     <div class="booking-price">-</div>
                     <a href="mailto:contact@gregoryswarnenterprises.com" class="btn btn-secondary btn-large">
                         <i class="fas fa-paper-plane"></i> Email Us →
-                    </a>
-                </div>
-            </div>
-            
-            <!-- Portal Links Section -->
-            <div style="text-align: center; margin: 3rem 0;">
-                <h3>Explore Our Specialized Portals</h3>
-                <p>Discover focused coaching programs for specific areas of growth</p>
-                
-                <div class="portal-links">
-                    <a href="https://greedforlifeinternational.com" target="_blank" class="portal-link">
-                        <span class="portal-icon"><i class="fas fa-chart-line"></i></span>
-                        <div>
-                            <strong>Business Portal</strong>
-                            <small>Revenue & Growth Strategy</small>
-                        </div>
-                    </a>
-                    
-                    <a href="https://maximizeforlifeinternational.com" target="_blank" class="portal-link">
-                        <span class="portal-icon"><i class="fas fa-heartbeat"></i></span>
-                        <div>
-                            <strong>Wellness Portal</strong>
-                            <small>Peak Performance & Health</small>
-                        </div>
                     </a>
                 </div>
             </div>
@@ -415,8 +376,8 @@
                             <option value="strategy">Strategy Session</option>
                             <option value="90day">90-Day Transformation</option>
                             <option value="corporate">Corporate Program</option>
-                            <option value="business">Business Portal (Revenue)</option>
-                            <option value="wellness">Wellness Portal (Health)</option>
+                            <option value="business">Business Portal (greedforlifeinternational.com)</option>
+                            <option value="wellness">Wellness Portal (maximizeforlifeinternational.com)</option>
                             <option value="other">Other Inquiry</option>
                         </select>
                     </div>
@@ -442,58 +403,72 @@
                     <h4><i class="fas fa-crown"></i> Gregory Swarn Enterprises</h4>
                     <p>Integrated performance coaching for visionary leaders.</p>
                     <p><i class="fas fa-map-marker-alt"></i> Based in New York</p>
+                    
+                    <!-- Enhanced Social Icons in Footer -->
+                    <div class="social-icons-grid" style="justify-content: flex-start;">
+                        <a href="https://youtube.com/@greg-w8l" target="_blank" class="social-icon youtube" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://instagram.com/gregoryswarn" target="_blank" class="social-icon instagram" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://tiktok.com/@gregoryswarn" target="_blank" class="social-icon tiktok" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://twitter.com/gregoryswarn" target="_blank" class="social-icon twitter" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/gregoryswarn" target="_blank" class="social-icon linkedin" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
                 </div>
                 
                 <div class="footer-section">
                     <h4><i class="fas fa-link"></i> Quick Links</h4>
                     <a href="#coaching"><i class="fas fa-brain"></i> Coaching</a>
                     <a href="#services"><i class="fas fa-concierge-bell"></i> Services</a>
-                    <a href="#results"><i class="fas fa-trophy"></i> Results</a>
+                    <a href="#results"><i class="fas fa-chart-bar"></i> Results</a>
                     <a href="#booking"><i class="fas fa-calendar-alt"></i> Book Call</a>
                 </div>
                 
                 <div class="footer-section">
-                    <h4><i class="fas fa-envelope"></i> Contact</h4>
-                    <p><i class="fas fa-envelope"></i> contact@gregoryswarnenterprises.com</p>
-                    <p><i class="fas fa-phone"></i> Available upon request</p>
-                    <a href="mailto:contact@gregoryswarnenterprises.com" class="btn-consultation" style="margin-left:0;margin-top:1rem;">
-                        <i class="fas fa-paper-plane"></i> Email Us
+                    <h4><i class="fas fa-network-wired"></i> Network Portals</h4>
+                    <a href="https://greedforlifeinternational.com" target="_blank" class="portal-link business" style="display: inline-flex; margin-bottom: 0.5rem;">
+                        <i class="fas fa-briefcase"></i> Business Growth Portal
                     </a>
+                    <a href="https://maximizeforlifeinternational.com" target="_blank" class="portal-link wellness" style="display: inline-flex;">
+                        <i class="fas fa-spa"></i> Wellness Portal
+                    </a>
+                    
+                    <div style="margin-top: 1rem;">
+                        <h4><i class="fas fa-envelope"></i> Contact</h4>
+                        <p>📧 contact@gregoryswarnenterprises.com</p>
+                    </div>
                 </div>
                 
                 <div class="footer-section">
-                    <h4><i class="fas fa-share-alt"></i> Connect</h4>
-                    <div class="social-icons" style="justify-content: flex-start;">
-                        <a href="https://youtube.com/@greg-w8l" target="_blank" class="social-icon" aria-label="YouTube">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                        <a href="https://instagram.com/gregoryswarn" target="_blank" class="social-icon" aria-label="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://tiktok.com/@gregoryswarn" target="_blank" class="social-icon" aria-label="TikTok">
-                            <i class="fab fa-tiktok"></i>
-                        </a>
-                        <a href="https://twitter.com/gregoryswarn" target="_blank" class="social-icon" aria-label="Twitter">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="https://linkedin.com/in/gregoryswarn" target="_blank" class="social-icon" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </div>
-                    <p style="margin-top:1rem;"><i class="fas fa-lightbulb"></i> Follow for daily insights</p>
+                    <h4><i class="fas fa-book-open"></i> Resources</h4>
+                    <a href="https://calendly.com/gregoryswarnenterprises/30min" target="_blank">
+                        <i class="fas fa-calendar-day"></i> Book Free Call
+                    </a>
+                    <a href="mailto:contact@gregoryswarnenterprises.com">
+                        <i class="fas fa-headset"></i> Contact Support
+                    </a>
+                    <a href="#coaching">
+                        <i class="fas fa-graduation-cap"></i> Coaching Methodology
+                    </a>
                 </div>
             </div>
             
             <div class="copyright">
-                <p><i class="far fa-copyright"></i> <span class="current-year">2024</span> Gregory Swarn Enterprises. All rights reserved.</p>
-                <div class="portal-links" style="margin: 1rem 0;">
-                    <a href="https://greedforlifeinternational.com" target="_blank" class="portal-link" style="padding: 0.5rem 1rem; font-size: 0.9rem;">
-                        <span class="portal-icon"><i class="fas fa-chart-line"></i></span>
-                        <span>Business Portal</span>
+                <p>© <span class="current-year">2024</span> Gregory Swarn Enterprises. All rights reserved.</p>
+                <div class="portal-links" style="justify-content: center; margin-top: 1rem;">
+                    <a href="https://greedforlifeinternational.com" target="_blank" class="portal-link business" style="font-size: 0.9rem;">
+                        <i class="fas fa-external-link-alt"></i> Business Portal
                     </a>
-                    <a href="https://maximizeforlifeinternational.com" target="_blank" class="portal-link" style="padding: 0.5rem 1rem; font-size: 0.9rem;">
-                        <span class="portal-icon"><i class="fas fa-heartbeat"></i></span>
-                        <span>Wellness Portal</span>
+                    <a href="https://maximizeforlifeinternational.com" target="_blank" class="portal-link wellness" style="font-size: 0.9rem;">
+                        <i class="fas fa-external-link-alt"></i> Wellness Portal
                     </a>
                 </div>
             </div>
@@ -503,33 +478,17 @@
     <script src="script.js"></script>
     
     <script>
-        // Initialize current year
+        // Ensure greg-4.jpg is loaded properly
         document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('.current-year').forEach(el => {
-                el.textContent = new Date().getFullYear();
-            });
-            
-            // Social media links data
-            const socialLinks = {
-                youtube: 'https://youtube.com/@greg-w8l',
-                instagram: 'https://instagram.com/gregoryswarn',
-                tiktok: 'https://tiktok.com/@gregoryswarn',
-                twitter: 'https://twitter.com/gregoryswarn',
-                linkedin: 'https://linkedin.com/in/gregoryswarn'
-            };
-            
-            // Add social links to footer if needed
-            const footerSocial = document.querySelector('.footer-social');
-            if (footerSocial) {
-                let html = '';
-                for (const [platform, url] of Object.entries(socialLinks)) {
-                    html += `
-                        <a href="${url}" target="_blank" class="social-icon" aria-label="${platform}">
-                            <i class="fab fa-${platform}"></i>
-                        </a>
-                    `;
-                }
-                footerSocial.innerHTML = html;
+            const heroImage = document.getElementById('dynamic-hero');
+            if (heroImage) {
+                // Force reload of greg-4.jpg
+                heroImage.src = 'media/greg/greg-4.jpg?' + new Date().getTime();
+                
+                // Fallback if image fails
+                heroImage.onerror = function() {
+                    this.src = 'https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=800&auto=format&fit=crop&q=80';
+                };
             }
         });
     </script>
