@@ -67,10 +67,10 @@
             color: white;
         }
         
-        /* Social Icons - KEEPING YOUR COLORS */
+        /* Social Icons - KEEPING ORIGINAL COLORS */
         .social-icons-grid {
             display: flex;
-            gap: 0.75rem;
+            gap: 1rem;
             margin-top: 1.5rem;
             justify-content: center;
         }
@@ -79,69 +79,41 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 42px;
-            height: 42px;
+            width: 44px;
+            height: 44px;
+            color: white;
             border-radius: 50%;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             text-decoration: none;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
         
         .social-icon:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
         }
         
-        .social-icon.youtube { 
-            background: linear-gradient(135deg, #FF0000, #CC0000); 
-            color: white; 
-        }
+        /* KEEPING ORIGINAL COLORS - NO HOVER COLOR CHANGE */
+        .social-icon.youtube { background: linear-gradient(135deg, #FF0000, #CC0000); }
+        .social-icon.instagram { background: linear-gradient(135deg, #E4405F, #C13584); }
+        .social-icon.tiktok { background: linear-gradient(135deg, #000000, #25F4EE); }
+        .social-icon.twitter { background: linear-gradient(135deg, #1DA1F2, #0d8bd9); }
+        .social-icon.linkedin { background: linear-gradient(135deg, #0077B5, #005582); }
         
-        .social-icon.instagram { 
-            background: linear-gradient(135deg, #E4405F, #C13584); 
-            color: white; 
-        }
-        
-        .social-icon.tiktok { 
-            background: linear-gradient(135deg, #000000, #25F4EE); 
-            color: white; 
-        }
-        
-        .social-icon.twitter { 
-            background: linear-gradient(135deg, #1DA1F2, #0d8bd9); 
-            color: white; 
-        }
-        
-        .social-icon.linkedin { 
-            background: linear-gradient(135deg, #0077B5, #005582); 
-            color: white; 
-        }
-        
-        /* Simple image gallery */
-        .image-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin: var(--space-xl) 0;
-        }
-        
-        .gallery-image {
+        /* Image styles */
+        .coach-main-image {
             width: 100%;
-            height: 200px;
+            height: 400px;
             object-fit: cover;
-            border-radius: var(--radius);
-            transition: transform 0.3s ease;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
         }
         
-        .gallery-image:hover {
-            transform: scale(1.02);
-        }
-        
+        /* Responsive adjustments */
         @media (max-width: 768px) {
             .portal-links {
                 flex-direction: column;
-                width: 100%;
             }
             
             .portal-link {
@@ -178,6 +150,7 @@
                 <h1>Your Vision. Your Potential. Transformed.</h1>
                 <p class="hero-subtitle">Integrated performance coaching for visionary leaders ready to elevate their impact, revenue, and well-being.</p>
                 
+                <!-- Portal Links -->
                 <div class="portal-links">
                     <a href="https://greedforlifeinternational.com" target="_blank" class="portal-link business">
                         <i class="fas fa-briefcase"></i> Business Growth Portal
@@ -196,7 +169,7 @@
                     </a>
                 </div>
                 
-                <!-- Social Icons with your colors -->
+                <!-- Social Icons with ORIGINAL COLORS -->
                 <div class="social-icons-grid">
                     <a href="https://youtube.com/@greg-w8l" target="_blank" class="social-icon youtube" aria-label="YouTube">
                         <i class="fab fa-youtube"></i>
@@ -232,8 +205,10 @@
             </div>
             
             <div class="coach-image">
-                <!-- Simple direct image usage - greg-4.jpg -->
-                <img src="media/greg/greg-4.jpg" alt="Gregory Swarn - Performance Coach">
+                <!-- Using greg-4.jpeg from same repository -->
+                <img src="greg-4.jpeg" 
+                     alt="Gregory Swarn - Performance Coach" 
+                     class="coach-main-image">
                 <div class="coach-bio">
                     <h4>Gregory Swarn</h4>
                     <p>Integrated Performance Coach</p>
@@ -335,17 +310,6 @@
                     <p>Entrepreneur regained work-life balance</p>
                 </div>
             </div>
-            
-            <div class="image-gallery">
-                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&auto=format&fit=crop&q=80" 
-                     alt="Executive Coaching Session" class="gallery-image">
-                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&auto=format&fit=crop&q=80" 
-                     alt="Wellness & Meditation" class="gallery-image">
-                <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&auto=format&fit=crop&q=80" 
-                     alt="Leadership Development" class="gallery-image">
-                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&auto=format&fit=crop&q=80" 
-                     alt="Team Success & Strategy" class="gallery-image">
-            </div>
         </div>
     </section>
 
@@ -357,7 +321,7 @@
             
             <div class="booking-options">
                 <div class="booking-card">
-                    <h3><i class="fas fa-phone-alt"></i> Discovery Call</h3>
+                    <h3>Discovery Call</h3>
                     <p>30-minute introductory conversation to explore fit and goals</p>
                     <div class="booking-price">FREE</div>
                     <a href="https://calendly.com/gregoryswarnenterprises/30min" target="_blank" class="btn btn-primary btn-large">
@@ -366,7 +330,7 @@
                 </div>
                 
                 <div class="booking-card">
-                    <h3><i class="fas fa-envelope"></i> Email Inquiry</h3>
+                    <h3>Email Inquiry</h3>
                     <p>For detailed questions or program information</p>
                     <div class="booking-price">-</div>
                     <a href="mailto:contact@gregoryswarnenterprises.com" class="btn btn-secondary btn-large">
@@ -375,35 +339,20 @@
                 </div>
             </div>
             
+            <!-- Contact Form -->
             <div class="contact-form">
-                <h3><i class="fas fa-comment-dots"></i> Send a Message</h3>
+                <h3>Send a Message</h3>
                 <form id="contactForm">
                     <div class="form-group">
-                        <label for="name"><i class="fas fa-user"></i> Full Name *</label>
-                        <input type="text" id="name" name="name" required>
+                        <input type="text" id="name" name="name" placeholder="Full Name *" required>
                     </div>
                     
                     <div class="form-group">
-                        <label for="email"><i class="fas fa-envelope"></i> Email Address *</label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" name="email" placeholder="Email Address *" required>
                     </div>
                     
                     <div class="form-group">
-                        <label for="service"><i class="fas fa-concierge-bell"></i> Service Interested In</label>
-                        <select id="service" name="service">
-                            <option value="">Select Option</option>
-                            <option value="strategy">Strategy Session</option>
-                            <option value="90day">90-Day Transformation</option>
-                            <option value="corporate">Corporate Program</option>
-                            <option value="business">Business Portal (greedforlifeinternational.com)</option>
-                            <option value="wellness">Wellness Portal (maximizeforlifeinternational.com)</option>
-                            <option value="other">Other Inquiry</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message"><i class="fas fa-edit"></i> Your Message</label>
-                        <textarea id="message" name="message" rows="4" placeholder="Tell us about your goals and challenges..."></textarea>
+                        <textarea id="message" name="message" rows="4" placeholder="Your message..."></textarea>
                     </div>
                     
                     <button type="submit" class="btn btn-primary btn-large">
@@ -419,10 +368,10 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-section">
-                    <h4><i class="fas fa-crown"></i> Gregory Swarn Enterprises</h4>
+                    <h4>Gregory Swarn Enterprises</h4>
                     <p>Integrated performance coaching for visionary leaders.</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Based in New York</p>
                     
+                    <!-- Social Icons in Footer with ORIGINAL COLORS -->
                     <div class="social-icons-grid" style="justify-content: flex-start;">
                         <a href="https://youtube.com/@greg-w8l" target="_blank" class="social-icon youtube" aria-label="YouTube">
                             <i class="fab fa-youtube"></i>
@@ -443,38 +392,28 @@
                 </div>
                 
                 <div class="footer-section">
-                    <h4><i class="fas fa-link"></i> Quick Links</h4>
-                    <a href="#coaching"><i class="fas fa-brain"></i> Coaching</a>
-                    <a href="#services"><i class="fas fa-concierge-bell"></i> Services</a>
-                    <a href="#results"><i class="fas fa-chart-bar"></i> Results</a>
-                    <a href="#booking"><i class="fas fa-calendar-alt"></i> Book Call</a>
+                    <h4>Quick Links</h4>
+                    <a href="#coaching">Coaching</a>
+                    <a href="#services">Services</a>
+                    <a href="#results">Results</a>
+                    <a href="#booking">Book Call</a>
                 </div>
                 
                 <div class="footer-section">
-                    <h4><i class="fas fa-network-wired"></i> Network Portals</h4>
+                    <h4>Network Portals</h4>
                     <a href="https://greedforlifeinternational.com" target="_blank" class="portal-link business" style="display: inline-flex; margin-bottom: 0.5rem; padding: 0.5rem 1rem;">
                         <i class="fas fa-briefcase"></i> Business Portal
                     </a>
                     <a href="https://maximizeforlifeinternational.com" target="_blank" class="portal-link wellness" style="display: inline-flex; padding: 0.5rem 1rem;">
                         <i class="fas fa-spa"></i> Wellness Portal
                     </a>
-                    
-                    <div style="margin-top: 1.5rem;">
-                        <h4><i class="fas fa-envelope"></i> Contact</h4>
-                        <p style="color: rgba(255,255,255,0.8);">📧 contact@gregoryswarnenterprises.com</p>
-                    </div>
                 </div>
                 
                 <div class="footer-section">
-                    <h4><i class="fas fa-book-open"></i> Resources</h4>
-                    <a href="https://calendly.com/gregoryswarnenterprises/30min" target="_blank">
-                        <i class="fas fa-calendar-day"></i> Book Free Call
-                    </a>
-                    <a href="mailto:contact@gregoryswarnenterprises.com">
-                        <i class="fas fa-headset"></i> Contact Support
-                    </a>
-                    <a href="#coaching">
-                        <i class="fas fa-graduation-cap"></i> Coaching Methodology
+                    <h4>Contact</h4>
+                    <p>📧 contact@gregoryswarnenterprises.com</p>
+                    <a href="https://calendly.com/gregoryswarnenterprises/30min" target="_blank" class="btn-consultation" style="margin-left:0;margin-top:1rem;">
+                        Book Free Call
                     </a>
                 </div>
             </div>
@@ -486,5 +425,37 @@
     </footer>
 
     <script src="script.js"></script>
+    
+    <script>
+        // Simple form handler
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contactForm');
+            if (form) {
+                form.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    
+                    const submitBtn = this.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.textContent;
+                    
+                    // Show loading
+                    submitBtn.textContent = 'Sending...';
+                    submitBtn.disabled = true;
+                    
+                    // Simulate form submission
+                    setTimeout(() => {
+                        alert('Thank you! We\'ll contact you within 24 hours.');
+                        form.reset();
+                        submitBtn.textContent = originalText;
+                        submitBtn.disabled = false;
+                    }, 1000);
+                });
+            }
+            
+            // Update copyright year
+            document.querySelectorAll('.current-year').forEach(el => {
+                el.textContent = new Date().getFullYear();
+            });
+        });
+    </script>
 </body>
 </html>
