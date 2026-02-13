@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executive Leadership Summit | Featured Speakers</title>
+    <link rel="stylesheet" href="style.css?v=3">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .speakers-banner {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .speakers-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(212,175,55,0.1)" stroke-width="0.5"/></svg>');
+            background-size: 200px 200px;
+            opacity: 0.3;
+        }
+        
+        .banner-content {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .event-title {
+            text-align: center;
+            color: #d4af37;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        
+        .event-subtitle {
+            text-align: center;
+            color: #fff;
+            font-size: 1.2rem;
+            margin-bottom: 50px;
+            font-weight: 300;
+        }
+        
+        .event-details-banner {
+            text-align: center;
+            color: #d4af37;
+            font-size: 1rem;
+            margin-bottom: 60px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        
+        .speakers-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+        
+        .speaker-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .speaker-card:hover {
+            transform: translateY(-10px);
+            border-color: #d4af37;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .speaker-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #d4af37;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .speaker-name {
+            color: #fff;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+        
+        .speaker-title {
+            color: #d4af37;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+        
+        .speaker-topic {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1rem;
+            font-style: italic;
+            line-height: 1.4;
+        }
+        
+        .cta-section {
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #d4af37;
+            color: #1a1a2e;
+            padding: 18px 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+        }
+        
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
+        }
+        
+        .banner-footer {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            margin-top: 30px;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .speakers-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .event-title {
+                font-size: 1.8rem;
+            }
+            
+            .speaker-photo {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Gregory Swarn" class="logo-image" width="120" height="40">
+            </a>
+            
+            <nav class="nav">
+                <a href="index.html#services">Services</a>
+                <a href="index.html#library">Library</a>
+                <a href="index.html#meet-coach">Meet Your Coach</a>
+                <a href="index.html#events">Events</a>
+                <a href="banners.html" class="active">Banners</a>
+                <a href="index.html#results">Results</a>
+                <a href="index.html#contact">Contact</a>
+                <a href="https://calendly.com/gregoryswarnenterprises/30min" target="_blank" class="btn btn-primary">Book Consultation</a>
+            </nav>
+            
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Speakers Banner Section -->
+    <section class="speakers-banner">
+        <div class="banner-content">
+            <h1 class="event-title">Executive Leadership Summit</h1>
+            <p class="event-subtitle">Transform Your Business & Leadership Potential</p>
+            <div class="event-details-banner">
+                <i class="fas fa-calendar-alt"></i> March 15, 2026 &nbsp;|&nbsp; 
+                <i class="fas fa-map-marker-alt"></i> Dallas, Texas &nbsp;|&nbsp;
+                <i class="fas fa-clock"></i> 9:00 AM - 6:00 PM
+            </div>
+            
+            <div class="speakers-grid">
+                <!-- Speaker 1 -->
+                <div class="speaker-card">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&auto=format&fit=crop&q=80" alt="Dr. Marcus Thompson - Keynote Speaker" class="speaker-photo">
+                    <h3 class="speaker-name">Dr. Marcus Thompson</h3>
+                    <p class="speaker-title">CEO, Fortune 500 Strategist</p>
+                    <p class="speaker-topic">"Scaling from Millions to Billions: The Executive Blueprint"</p>
+                </div>
+                
+                <!-- Speaker 2 - Gregory Swarn (Host) -->
+                <div class="speaker-card">
+                    <img src="media/greg/Greg-6.png" alt="Gregory Swarn - Executive Performance Coach" class="speaker-photo">
+                    <h3 class="speaker-name">Gregory Swarn</h3>
+                    <p class="speaker-title">Executive Performance Coach</p>
+                    <p class="speaker-topic">"Peak Performance Leadership: Integrating Success & Wellness"</p>
+                </div>
+                
+                <!-- Speaker 3 -->
+                <div class="speaker-card">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&auto=format&fit=crop&q=80" alt="Sarah Chen - Innovation Expert" class="speaker-photo">
+                    <h3 class="speaker-name">Sarah Chen</h3>
+                    <p class="speaker-title">Tech Innovation Leader</p>
+                    <p class="speaker-topic">"Digital Transformation: Leading Through Disruption"</p>
+                </div>
+            </div>
+            
+            <div class="cta-section">
+                <a href="https://calendly.com/gregoryswarnenterprises/30min" target="_blank" class="cta-button">
+                    <i class="fas fa-ticket-alt"></i> Reserve Your Seat
+                </a>
+            </div>
+            
+            <p class="banner-footer">
+                Limited Seats Available | Early Bird Pricing Ends February 28, 2026
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="logo.png" alt="Gregory Swarn" class="footer-logo" width="120" height="40">
+                    <p>Executive performance coaching for visionary leaders committed to excellence.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Services</h4>
+                        <a href="index.html#services">Executive Leadership</a>
+                        <a href="index.html#services">Business Scaling</a>
+                        <a href="index.html#services">Performance Integration</a>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Company</h4>
+                        <a href="index.html#results">Client Results</a>
+                        <a href="index.html#contact">Contact</a>
+                        <a href="https://calendly.com/gregoryswarnenterprises/30min" target="_blank">Schedule</a>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Connect</h4>
+                        <a href="https://youtube.com/@Greg-w8l" target="_blank">YouTube</a>
+                        <a href="https://linkedin.com/in/gregoryswarn" target="_blank">LinkedIn</a>
+                        <a href="mailto:contact@gregoryswarnenterprises.com">Email</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear">2024</span> Gregory Swarn Enterprises. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

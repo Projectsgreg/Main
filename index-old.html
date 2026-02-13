@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gregory Swarn | Integrated Performance Coaching</title>
+    
+    <meta name="description" content="Transform your leadership, business, and well-being with Gregory Swarn's integrated performance coaching. Book your discovery call today.">
+    
+    <link rel="stylesheet" href="style.css?v=33d7d2c">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="logo.png">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Portal Links */
+        .portal-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .portal-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: rgba(218, 171, 58, 0.1);
+            border: 2px solid var(--accent-gold);
+            border-radius: 25px;
+            color: var(--accent-gold);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .portal-link:hover {
+            background: var(--accent-gold);
+            color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+        
+        .portal-link.business {
+            border-color: #2a4d8d;
+            color: #2a4d8d;
+            background: rgba(42, 77, 141, 0.1);
+        }
+        
+        .portal-link.business:hover {
+            background: #2a4d8d;
+            color: white;
+        }
+        
+        .portal-link.wellness {
+            border-color: #2d6a4f;
+            color: #2d6a4f;
+            background: rgba(45, 106, 79, 0.1);
+        }
+        
+        .portal-link.wellness:hover {
+            background: #2d6a4f;
+            color: white;
+        }
+        
+        /* Social Icons - KEEPING ORIGINAL COLORS */
+        .social-icons-grid {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            justify-content: center;
+        }
+        
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            color: white;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+        
+        /* KEEPING ORIGINAL COLORS - NO HOVER COLOR CHANGE */
+        .social-icon.youtube { background: linear-gradient(135deg, #FF0000, #CC0000); }
+        .social-icon.instagram { background: linear-gradient(135deg, #E4405F, #C13584); }
+        .social-icon.tiktok { background: linear-gradient(135deg, #000000, #25F4EE); }
+        .social-icon.twitter { background: linear-gradient(135deg, #1DA1F2, #0d8bd9); }
+        .social-icon.linkedin { background: linear-gradient(135deg, #0077B5, #005582); }
+        
+        /* Image styles */
+        .coach-main-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .portal-links {
+                flex-direction: column;
+            }
+            
+            .portal-link {
+                justify-content: center;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Header -->
+    <header class="coaching-header">
+        <div class="container">
+            <a href="/" class="logo">
+                <img src="logo.png" alt="Gregory Swarn Logo" class="logo-image">
+            </a>
+            
+            <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+            
+            <nav>
+                <a href="#coaching">Coaching</a>
+                <a href="#services">Services</a>
+                <a href="#results">Results</a>
+                <a href="#media">Media</a>
+                <a href="#events">Events</a>
+                <a href="#booking" class="btn-consultation">Book Call</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="coaching-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Your Vision. Your Potential. Transformed.</h1>
+                <p class="hero-subtitle">Integrated performance coaching for visionary leaders ready to elevate their impact, revenue, and well-being.</p>
+                
+                <!-- Portal Links -->
+                <div class="portal-links">
+                    <a href="https://greedforlifeinternational.com" target="_blank" class="portal-link business">
+                        <i class="fas fa-briefcase"></i> Business Growth Portal
+                    </a>
+                    <a href="https://maximizeforlifeinternational.com" target="_blank" class="portal-link wellness">
+                        <i class="fas fa-spa"></i> Wellness Portal
+                    </a>
+                </div>
+                
+                <div class="hero-cta">
+                    <a href="https://calendly.com/gregoryswarnenterprises/30min" target="_blank" class="btn btn-primary btn-large">
+                        <i class="fas fa-calendar-check"></i> Book Discovery Call →
+                    </a>
+                    <a href="#services" class="btn btn-secondary">
+                        <i class="fas fa-eye"></i> View Services
+                    </a>
+                </div>
+                
+                <!-- Social Icons with ORIGINAL COLORS -->
+                <div class="social-icons-grid">
+                    <a href="https://youtube.com/@greg-w8l" target="_blank" class="social-icon youtube" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://instagram.com/gregoryswarn" target="_blank" class="social-icon instagram" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://tiktok.com/@gregoryswarn" target="_blank" class="social-icon tiktok" aria-label="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="https://twitter.com/gregoryswarn" target="_blank" class="social-icon twitter" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/gregoryswarn" target="_blank" class="social-icon linkedin" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+                
+                <div class="authority-badges">
+                    <div class="badge">
+                        <strong>250+</strong>
+                        <span>Clients Transformed</span>
+                    </div>
+                    <div class="badge">
+                        <strong>$15M+</strong>
+                        <span>Revenue Impact</span>
+                    </div>
+                    <div class="badge">
+                        <strong>98%</strong>
+                        <span>Satisfaction Rate</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="coach-image">
+                <!-- Using Greg-6.png from media/greg directory -->
+                <img src="media/greg/Greg-6.png" 
+                     alt="Gregory Swarn - Performance Coach" 
+                     class="coach-main-image">
+                <div class="coach-bio">
+                    <h4>Gregory Swarn</h4>
+                    <p>Integrated Performance Coach</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integrated Coaching -->
+    <section id="coaching" class="section">
+        <div class="container">
+            <h2>Integrated Performance Coaching</h2>
+            <p class="section-intro">True excellence requires harmony across all dimensions of performance.</p>
+            
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <div class="pillar-icon"><i class="fas fa-brain"></i></div>
+                    <h3>Mind Mastery</h3>
+                    <p>Clarity, focus, and strategic thinking for decisive leadership and innovation.</p>
+                </div>
+                
+                <div class="pillar-card">
+                    <div class="pillar-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Business Excellence</h3>
+                    <p>Scalable systems, revenue growth, and sustainable business models.</p>
+                </div>
+                
+                <div class="pillar-card">
+                    <div class="pillar-icon"><i class="fas fa-heartbeat"></i></div>
+                    <h3>Peak Wellness</h3>
+                    <p>Sustainable energy, optimal health, and work-life integration.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section">
+        <div class="container">
+            <h2>Coaching Services</h2>
+            <p class="section-intro">Transformational programs designed for executives, entrepreneurs, and high-performers.</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-bullseye"></i></div>
+                    <h3>Strategy Session</h3>
+                    <p>90-minute deep dive into your goals, challenges, and growth opportunities.</p>
+                    <div class="service-price">$2,500</div>
+                    <a href="https://calendly.com/gregoryswarnenterprises/30min" target="_blank" class="btn btn-primary">
+                        <i class="fas fa-calendar-alt"></i> Book Now
+                    </a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>90-Day Transformation</h3>
+                    <p>Comprehensive coaching program for breakthrough results and sustainable growth.</p>
+                    <div class="service-price">$15,000</div>
+                    <a href="mailto:contact@gregoryswarnenterprises.com?subject=90-Day%20Transformation%20Inquiry" class="btn btn-primary">
+                        <i class="fas fa-envelope"></i> Inquire Now
+                    </a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-building"></i></div>
+                    <h3>Corporate Programs</h3>
+                    <p>Team training, executive coaching, and organizational performance optimization.</p>
+                    <div class="service-price">Custom</div>
+                    <a href="mailto:contact@gregoryswarnenterprises.com?subject=Corporate%20Program%20Inquiry" class="btn btn-primary">
+                        <i class="fas fa-file-contract"></i> Get Proposal
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results -->
+    <section id="results" class="section">
+        <div class="container">
+            <h2>Client Results</h2>
+            <p class="section-intro">Real transformations from leaders who've elevated their performance.</p>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-chart-line"></i></div>
+                    <h4>317% Revenue Growth</h4>
+                    <p>Tech CEO scaled from $2M to $8.3M in 18 months</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-bolt"></i></div>
+                    <h4>42% Energy Increase</h4>
+                    <p>Executive recovered from burnout to peak performance</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-clock"></i></div>
+                    <h4>15hrs Weekly Time Saved</h4>
+                    <p>Entrepreneur regained work-life balance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="section">
+        <div class="container">
+            <h2>Upcoming Events</h2>
+            <p class="section-intro">Join Gregory Swarn for transformative coaching events and workshops.</p>
+            
+            <div class="events-showcase">
+                <div class="event-featured">
+                    <div class="event-featured-image">
+                        <img src="Event Autin, TX 2026.png" alt="Austin, TX 2026 Event" class="event-featured-photo">
+                    </div>
+                    <div class="event-featured-content">
+                        <div class="event-badge">Featured Event</div>
+                        <h3>Austin, TX 2026 Leadership Summit</h3>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> Austin, Texas</p>
+                        <p class="event-description">Join industry leaders for an intensive day of strategic leadership development and networking in the heart of Texas.</p>
+                        <div class="event-details">
+                            <div class="event-detail-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>March 15, 2026</span>
+                            </div>
+                            <div class="event-detail-item">
+                                <i class="fas fa-clock"></i>
+                                <span>9:00 AM - 6:00 PM</span>
+                            </div>
+                            <div class="event-detail-item">
+                                <i class="fas fa-users"></i>
+                                <span>50 Seats Available</span>
+                            </div>
+                        </div>
+                        <a href="mailto:contact@gregoryswarnenterprises.com?subject=Austin%20TX%202026%20Event%20Registration" class="btn btn-primary btn-large">Register Now</a>
+                    </div>
+                </div>
+                
+                <div class="additional-events">
+                    <h4>More Upcoming Events</h4>
+                    <div class="mini-events-grid">
+                        <div class="mini-event">
+                            <div class="mini-event-date">
+                                <span class="day">22</span>
+                                <span class="month">MAR</span>
+                            </div>
+                            <div class="mini-event-info">
+                                <h5>Business Growth Masterclass</h5>
+                                <p class="mini-event-location">Los Angeles, CA</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mini-event">
+                            <div class="mini-event-date">
+                                <span class="day">05</span>
+                                <span class="month">APR</span>
+                            </div>
+                            <div class="mini-event-info">
+                                <h5>Peak Wellness Retreat</h5>
+                                <p class="mini-event-location">Miami, FL</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Registration -->
+    <section id="event-registration" class="section section-alt">
+        <div class="container">
+            <h2>Register for an Event</h2>
+            <p class="section-intro">Secure your spot at our upcoming events. Limited seats available.</p>
+            
+            <div class="registration-options">
+                <div class="registration-card">
+                    <div class="registration-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Individual Registration</h3>
+                    <p>Perfect for personal development and growth.</p>
+                    <ul class="registration-features">
+                        <li><i class="fas fa-check"></i> Event access</li>
+                        <li><i class="fas fa-check"></i> Workshop materials</li>
+                        <li><i class="fas fa-check"></i> Networking opportunities</li>
+                        <li><i class="fas fa-check"></i> Certificate of completion</li>
+                    </ul>
+                    <a href="mailto:contact@gregoryswarnenterprises.com?subject=Individual%20Event%20Registration" class="btn btn-primary">Register Now</a>
+                </div>
+                
+                <div class="registration-card featured">
+                    <div class="registration-badge">Most Popular</div>
+                    <div class="registration-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Group Registration</h3>
+                    <p>Bring your team for maximum impact and savings.</p>
+                    <ul class="registration-features">
+                        <li><i class="fas fa-check"></i> Everything in Individual</li>
+                        <li><i class="fas fa-check"></i> 20% group discount</li>
+                        <li><i class="fas fa-check"></i> Team coaching session</li>
+                        <li><i class="fas fa-check"></i> Custom materials</li>
+                    </ul>
+                    <a href="mailto:contact@gregoryswarnenterprises.com?subject=Group%20Event%20Registration" class="btn btn-primary">Register Group</a>
+                </div>
+                
+                <div class="registration-card">
+                    <div class="registration-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Corporate Package</h3>
+                    <p>Custom events for your organization.</p>
+                    <ul class="registration-features">
+                        <li><i class="fas fa-check"></i> Private event</li>
+                        <li><i class="fas fa-check"></i> Custom curriculum</li>
+                        <li><i class="fas fa-check"></i> On-site or virtual</li>
+                        <li><i class="fas fa-check"></i> Follow-up coaching</li>
+                    </ul>
+                    <a href="mailto:contact@gregoryswarnenterprises.com?subject=Corporate%20Event%20Inquiry" class="btn btn-primary">Get Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media Library -->
+    <section id="media" class="section">
+        <div class="container">
+            <h2>Meet Gregory Swarn</h2>
+            <p class="section-intro">Get to know your host and coach through these exclusive insights into his coaching approach</p>
+            
+            <!-- YouTube Video Intro -->
+            <div class="video-intro">
+                <h3>Introduction to Gregory Swarn</h3>
+                <div class="video-container">
+                    <iframe 
+                        width="100%" 
+                        height="600" 
+                        src="https://www.youtube.com/embed/qgUr35RLZ-c?autoplay=1&mute=1&loop=1&playlist=qgUr35RLZ-c&controls=1&modestbranding=1&rel=0&showinfo=0&autohide=1&iv_load_policy=3&cc_load_policy=1" 
+                        title="Introduction to Gregory Swarn"
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen
+                        class="intro-video">
+                    </iframe>
+                </div>
+                <p class="video-description">Discover Gregory's integrated coaching philosophy and approach to transforming lives and businesses</p>
+            </div>
+            
+            <!-- Local Videos -->
+            <div class="local-videos">
+                <h3>Coaching in Action</h3>
+                <div class="media-grid">
+                    <div class="media-item">
+                        <h4>Business Excellence</h4>
+                        <video autoplay muted loop playsinline class="media-video">
+                            <source src="media/videos/business -1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p>Meet your host and coach Gregory</p>
+                    </div>
+                    
+                    <div class="media-item">
+                        <h4>Wellness Transformation</h4>
+                        <video autoplay muted loop playsinline class="media-video">
+                            <source src="media/videos/Wellness -1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p>Peak wellness and energy optimization</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Greg's Podcast Episodes -->
+            <div class="podcast-section">
+                <h3>Watch More Podcast Episodes</h3>
+                <p class="section-intro">Explore more insights from Gregory's podcast channel</p>
+                
+                <div class="podcast-grid">
+                    <div class="podcast-episode">
+                        <iframe 
+                            width="100%" 
+                            height="200" 
+                            src="https://www.youtube.com/embed/videoseries?list=UU_greg-w8l" 
+                            title="Greg's Podcast Episodes"
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen
+                            class="podcast-video">
+                        </iframe>
+                        <div class="podcast-info">
+                            <h4>Latest Episodes</h4>
+                            <p>Recent coaching insights and strategies</p>
+                            <a href="https://www.youtube.com/@Greg-w8l" target="_blank" class="btn btn-small">
+                                <i class="fab fa-youtube"></i> Watch Full Channel
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="podcast-episode">
+                        <iframe 
+                            width="100%" 
+                            height="200" 
+                            src="https://www.youtube.com/embed/qgUr35RLZ-c?autoplay=0&mute=1&controls=1&modestbranding=1&rel=0" 
+                            title="Introduction to Gregory Swarn"
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen
+                            class="podcast-video">
+                        </iframe>
+                        <div class="podcast-info">
+                            <h4>Featured Episode</h4>
+                            <p>Introduction to Gregory Swarn</p>
+                            <a href="https://www.youtube.com/@Greg-w8l" target="_blank" class="btn btn-small">
+                                <i class="fab fa-youtube"></i> Subscribe
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="podcast-cta">
+                    <a href="https://www.youtube.com/@Greg-w8l" target="_blank" class="btn btn-primary btn-large">
+                        <i class="fab fa-youtube"></i> Subscribe to Greg's Podcast Channel
+                    </a>
+                    <p class="cta-description">Never miss an episode - get weekly coaching insights delivered to you</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking -->
+    <section id="booking" class="section booking-section">
+        <div class="container">
+            <h2>Begin Your Transformation</h2>
+            <p class="section-intro">Start with a complimentary discovery call to explore your goals.</p>
+            
+            <div class="booking-options">
+                <div class="booking-card">
+                    <h3>Discovery Call</h3>
+                    <p>30-minute introductory conversation to explore fit and goals</p>
+                    <div class="booking-price">FREE</div>
+                    <a href="https://calendly.com/gregoryswarnenterprises/30min" target="_blank" class="btn btn-primary btn-large">
+                        <i class="fas fa-calendar-check"></i> Schedule Now →
+                    </a>
+                </div>
+                
+                <div class="booking-card">
+                    <h3>Email Inquiry</h3>
+                    <p>For detailed questions or program information</p>
+                    <div class="booking-price">-</div>
+                    <a href="mailto:contact@gregoryswarnenterprises.com" class="btn btn-secondary btn-large">
+                        <i class="fas fa-paper-plane"></i> Email Us →
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <h3>Send a Message</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Full Name *" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Email Address *" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="4" placeholder="Your message..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-large">
+                        <i class="fas fa-paper-plane"></i> Send Message →
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="coaching-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Gregory Swarn Enterprises</h4>
+                    <p>Integrated performance coaching for visionary leaders.</p>
+                    
+                    <!-- Social Icons in Footer with ORIGINAL COLORS -->
+                    <div class="social-icons-grid" style="justify-content: flex-start;">
+                        <a href="https://youtube.com/@greg-w8l" target="_blank" class="social-icon youtube" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://instagram.com/gregoryswarn" target="_blank" class="social-icon instagram" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://tiktok.com/@gregoryswarn" target="_blank" class="social-icon tiktok" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://twitter.com/gregoryswarn" target="_blank" class="social-icon twitter" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/gregoryswarn" target="_blank" class="social-icon linkedin" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="#coaching">Coaching</a>
+                    <a href="#services">Services</a>
+                    <a href="#results">Results</a>
+                    <a href="#booking">Book Call</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Network Portals</h4>
+                    <a href="https://greedforlifeinternational.com" target="_blank" class="portal-link business" style="display: inline-flex; margin-bottom: 0.5rem; padding: 0.5rem 1rem;">
+                        <i class="fas fa-briefcase"></i> Business Portal
+                    </a>
+                    <a href="https://maximizeforlifeinternational.com" target="_blank" class="portal-link wellness" style="display: inline-flex; padding: 0.5rem 1rem;">
+                        <i class="fas fa-spa"></i> Wellness Portal
+                    </a>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📧 contact@gregoryswarnenterprises.com</p>
+                    <a href="https://calendly.com/gregoryswarnenterprises/30min" target="_blank" class="btn-consultation" style="margin-left:0;margin-top:1rem;">
+                        Book Free Call
+                    </a>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© <span class="current-year">2024</span> Gregory Swarn Enterprises. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    
+    <script>
+        // Simple form handler
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contactForm');
+            if (form) {
+                form.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    
+                    const submitBtn = this.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.textContent;
+                    
+                    // Show loading
+                    submitBtn.textContent = 'Sending...';
+                    submitBtn.disabled = true;
+                    
+                    // Simulate form submission
+                    setTimeout(() => {
+                        alert('Thank you! We\'ll contact you within 24 hours.');
+                        form.reset();
+                        submitBtn.textContent = originalText;
+                        submitBtn.disabled = false;
+                    }, 1000);
+                });
+            }
+            
+            // Update copyright year
+            document.querySelectorAll('.current-year').forEach(el => {
+                el.textContent = new Date().getFullYear();
+            });
+        });
+    </script>
+</body>
+</html>
