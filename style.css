@@ -964,3 +964,37 @@ p { color: var(--ink-soft); }
 .insight-readmore { display: inline-flex; align-items: center; gap: 8px; font-size: 0.88rem; font-weight: 600; color: var(--gold-deep); margin-top: 8px; transition: gap var(--t); }
 .insight-card-link:hover .insight-readmore { gap: 14px; }
 .insight-date { font-size: 0.85rem; color: var(--muted); }
+
+/* Stack ladder + Diagnostic grid */
+.wealth-stack { padding: clamp(70px, 9vw, 120px) 0; background: var(--bg-soft); }
+.stack-layers { display: flex; flex-direction: column; gap: 0; max-width: 760px; margin: 0 auto 50px; }
+.stack-layer {
+    display: flex; align-items: stretch; gap: 24px;
+    padding: 28px 32px; background: #fff; border: 1px solid var(--line);
+    margin-bottom: -1px;
+    transition: transform var(--t), border-color var(--t), box-shadow var(--t);
+    position: relative;
+}
+.stack-layer:first-child { border-radius: var(--radius) var(--radius) 0 0; }
+.stack-layer:last-child { border-radius: 0 0 var(--radius) var(--radius); }
+.stack-layer:hover { border-color: var(--gold); z-index: 2; box-shadow: var(--shadow); transform: translateX(6px); }
+.stack-num { font-family: var(--font-serif); font-size: 2.4rem; font-weight: 700; color: var(--gold-deep); line-height: 1; flex-shrink: 0; min-width: 60px; }
+.stack-content h3 { font-size: 1.25rem; margin-bottom: 6px; }
+.stack-content p { font-size: 0.98rem; }
+
+.misallocations { padding: clamp(70px, 9vw, 120px) 0; background: #fff; }
+.misalloc-grid { display: grid; grid-template-columns: 1fr; gap: 18px; max-width: 1080px; margin: 0 auto; }
+@media (min-width: 768px) { .misalloc-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1100px) { .misalloc-grid { grid-template-columns: repeat(3, 1fr); } }
+.misalloc-card {
+    position: relative; padding: 30px 28px 28px;
+    border-radius: var(--radius); background: var(--bg-soft);
+    border: 1px solid var(--line); border-left: 4px solid var(--gold);
+    transition: transform var(--t), background var(--t), box-shadow var(--t);
+}
+.misalloc-card:hover { transform: translateY(-4px); background: #fff; box-shadow: var(--shadow); }
+.misalloc-num { font-family: var(--font-serif); font-size: 0.85rem; font-weight: 700; color: var(--gold-deep); letter-spacing: 0.08em; display: block; margin-bottom: 10px; }
+.misalloc-card h4 { margin-bottom: 10px; font-size: 1.05rem; line-height: 1.3; }
+.misalloc-card p { font-size: 0.92rem; }
+
+.library-tag i { margin-right: 6px; font-size: 0.85rem; vertical-align: -1px; }
