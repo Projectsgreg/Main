@@ -1099,3 +1099,26 @@ p { color: var(--ink-soft); }
 }
 .thesis-item p { font-size: 0.98rem; color: var(--ink-soft); margin: 0; line-height: 1.6; }
 .thesis-item strong { color: var(--ink); font-weight: 600; }
+
+/* Statement section (replaces showreel on Main) */
+.statement {
+    padding: clamp(80px, 12vw, 140px) 0;
+    background:
+        radial-gradient(900px 500px at 80% 30%, rgba(201,169,97,0.18), transparent 60%),
+        var(--bg-dark);
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+.statement .container { max-width: 900px; }
+.statement .eyebrow { color: var(--gold); }
+.statement h2 {
+    color: #fff;
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 26px;
+    line-height: 1.15;
+}
+.statement p { color: rgba(255,255,255,0.78); font-size: 1.08rem; max-width: 640px; margin: 0 auto 36px; }
+.statement-actions { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+.statement .btn-primary { background: var(--gold-deep); border-color: var(--gold-deep); }
+.statement .btn-primary:hover { background: #fff; color: var(--ink); border-color: #fff; }
