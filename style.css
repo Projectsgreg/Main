@@ -23,7 +23,7 @@
 
     /* Typography */
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    --font-serif: 'Fraunces', Georgia, 'Times New Roman', serif;
 
     /* Layout */
     --container: 1240px;
@@ -61,6 +61,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 ::selection { background: var(--gold); color: #fff; }
 
+/* Premium duotone icon treatment — layered depth on feature/badge icons */
+.ph-duotone { --ph-duotone-secondary-opacity: 0.32; }
+
 /* Accessibility */
 .skip-link {
     position: absolute; top: -100px; left: 0;
@@ -76,7 +79,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 @media (min-width: 768px) { .container { padding: 0 40px; } }
 
 /* Typography */
-h1, h2, h3, h4, h5 { font-family: var(--font-serif); font-weight: 600; line-height: 1.15; letter-spacing: -0.02em; color: var(--ink); }
+h1, h2, h3, h4, h5 { font-family: var(--font-serif); font-optical-sizing: auto; font-weight: 600; line-height: 1.15; letter-spacing: -0.02em; color: var(--ink); }
 h1 { font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 700; }
 h2 { font-size: clamp(1.9rem, 3.6vw, 2.8rem); }
 h3 { font-size: clamp(1.3rem, 2vw, 1.6rem); }
@@ -91,7 +94,7 @@ p { color: var(--ink-soft); }
     color: var(--gold-deep);
     margin-bottom: 18px;
 }
-.accent { color: var(--gold-deep); }
+.accent { color: var(--gold-deep); font-style: italic; font-weight: 500; }
 
 .section-header { text-align: center; max-width: 760px; margin: 0 auto 64px; }
 .section-header p { font-size: 1.05rem; margin-top: 14px; }
@@ -623,9 +626,9 @@ p { color: var(--ink-soft); }
 }
 .check-list li:last-child { border-bottom: none; }
 .check-list li::before {
-    content: "\f00c"; font-family: "Font Awesome 6 Free"; font-weight: 900;
+    content: "\2713";
     position: absolute; left: 0; top: 8px;
-    color: var(--gold-deep); font-size: 0.9rem;
+    color: var(--gold-deep); font-weight: 700; font-size: 0.9rem;
 }
 .dot-list li {
     position: relative; padding: 6px 0 6px 22px;
@@ -1122,3 +1125,111 @@ p { color: var(--ink-soft); }
 .statement-actions { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
 .statement .btn-primary { background: var(--gold-deep); border-color: var(--gold-deep); }
 .statement .btn-primary:hover { background: #fff; color: var(--ink); border-color: #fff; }
+
+/* =========================================================
+   Trust pillars (Confidential / Field-Tested / Quietly Premium)
+   ========================================================= */
+.trust-pillars { padding: clamp(60px, 8vw, 100px) 0; background: #fff; border-bottom: 1px solid var(--line); }
+.trust-pillars-grid { display: grid; grid-template-columns: 1fr; gap: 18px; max-width: 1080px; margin: 0 auto; }
+@media (min-width: 768px) { .trust-pillars-grid { grid-template-columns: repeat(3, 1fr); } }
+.trust-pillar-card {
+    padding: 30px 28px;
+    background: var(--bg-soft);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    transition: transform var(--t), box-shadow var(--t), background var(--t);
+}
+.trust-pillar-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); background: #fff; border-color: var(--gold); }
+.trust-pillar-card .rule { width: 32px; height: 2px; background: var(--gold); margin-bottom: 18px; }
+.trust-pillar-card h3 { font-size: 1.15rem; margin-bottom: 10px; }
+.trust-pillar-card p { font-size: 0.95rem; }
+
+/* =========================================================
+   Editorial pull-quote (dark, large serif italic)
+   ========================================================= */
+.pull-quote {
+    padding: clamp(60px, 8vw, 100px) 0;
+    background: var(--bg-deep);
+    color: #fff;
+    text-align: center;
+}
+.pull-quote .container { max-width: 880px; }
+.pull-quote blockquote p {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(1.5rem, 3.2vw, 2.3rem);
+    line-height: 1.35;
+    color: #fff;
+    margin-bottom: 22px;
+}
+.pull-quote cite {
+    display: block;
+    font-style: normal;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--gold);
+    font-weight: 600;
+}
+
+/* =========================================================
+   Methodology (4-step arc, about.html)
+   ========================================================= */
+.methodology { padding: clamp(70px, 9vw, 120px) 0; background: var(--bg-soft); }
+.method-grid { display: grid; grid-template-columns: 1fr; gap: 22px; max-width: 1160px; margin: 0 auto; }
+@media (min-width: 640px) { .method-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1100px) { .method-grid { grid-template-columns: repeat(4, 1fr); } }
+.method-step {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 30px 26px;
+    transition: transform var(--t), box-shadow var(--t), border-color var(--t);
+}
+.method-step:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: var(--gold); }
+.method-step-num {
+    display: flex; align-items: center; justify-content: center;
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: var(--ink); color: var(--gold);
+    font-family: var(--font-serif); font-weight: 700; font-size: 1.05rem;
+    margin-bottom: 18px;
+}
+.method-step h4 { margin-bottom: 10px; font-size: 1.08rem; line-height: 1.3; }
+.method-step p { font-size: 0.93rem; }
+
+/* =========================================================
+   Signature topics (speaking, services.html)
+   ========================================================= */
+.signature-topics { padding: clamp(70px, 9vw, 120px) 0; background: #fff; }
+.topics-list { max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; gap: 2px; }
+.topic-item {
+    padding: 28px 4px;
+    border-bottom: 1px solid var(--line);
+    display: grid; grid-template-columns: 1fr; gap: 8px;
+    transition: padding var(--t);
+}
+.topic-item:first-child { padding-top: 4px; }
+.topic-item:hover { padding-left: 12px; }
+.topic-item h3 { font-size: 1.15rem; line-height: 1.35; }
+.topic-item h3 em { color: var(--gold-deep); font-style: italic; }
+.topic-item p { font-size: 0.95rem; margin-top: 4px; }
+
+/* =========================================================
+   Stat strip — 5 columns (home/results with continents)
+   ========================================================= */
+.metric-grid-5 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; text-align: center; }
+@media (min-width: 768px) { .metric-grid-5 { grid-template-columns: repeat(5, 1fr); } }
+.metric-grid-5 > div strong {
+    display: block;
+    font-family: var(--font-serif);
+    font-size: clamp(1.7rem, 2.6vw, 2.2rem); font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 6px;
+    line-height: 1;
+}
+.metric-grid-5 > div span {
+    font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em;
+    color: rgba(255,255,255,0.6);
+}
