@@ -1,4 +1,4 @@
-﻿<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>GSE Month One</title>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>GSE Month One</title>
 <meta name="robots" content="noindex, nofollow, noarchive">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap">
@@ -13,6 +13,10 @@ body { min-height: 100vh; background: radial-gradient(ellipse at 50% 0%, #2a241a
 .cap p, .pg { overflow-wrap: anywhere; }
 .pg.media { overflow: hidden; }
 .controls button:disabled { opacity: .4; cursor: default; }
+.controls { flex-wrap: wrap; }
+.controls button.ghost { background: transparent; color: #e8c56c; border: 1px solid rgba(232,197,108,.55); }
+.progress-wrap { max-width: 420px; height: 3px; margin: 12px auto 0; background: rgba(232,197,108,.15); border-radius: 3px; overflow: hidden; }
+#progress { height: 100%; width: 0%; background: linear-gradient(90deg, #b98a2e, #f0d080); }
 #book { touch-action: pan-y; }
 body { font-family: var(--body); padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 24px 40px; }
 header.top { max-width: 1120px; margin: 0 auto 18px; display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: baseline; justify-content: space-between; }
@@ -192,7 +196,9 @@ figcaption { font-size: 10.5px; color: var(--muted); margin-top: 4px; }
 <div class="page hard cover" data-density="hard"><div class="cover-art back"><div class="back-quote">"Success means very little if you sacrifice your health, your peace, and your ability to enjoy the life you've worked so hard to build."</div>
 <div class="cover-kicker">Gregory Swarn</div><div class="cover-sub">gregoryswarnenterprises.com</div></div></div></div>
 <div class="controls"><button id="prev" type="button">&larr; Back</button><span id="pos" aria-live="polite">Cover</span>
-<button id="next" type="button">Open the book &rarr;</button></div>
+<button id="next" type="button">Open the book &rarr;</button>
+<button id="tour" type="button" class="ghost">Pause tour</button><button id="sound" type="button" class="ghost">Sound on</button></div>
+<div class="progress-wrap" aria-hidden="true"><div id="progress"></div></div>
 <div id="zoom" hidden role="dialog" aria-modal="true" aria-label="Enlarged image, press Escape to close" tabindex="-1"><img alt=""></div>
 <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.js"></script>
 <script>
@@ -216,11 +222,55 @@ figcaption { font-size: 10.5px; color: var(--muted); margin-top: 4px; }
       showCover: true, maxShadowOpacity: 0.45, mobileScrollSupport: true, useMouseEvents: true, disableFlipByClick: true,
       swipeDistance: 30, clickEventForward: true, drawShadow: true, flippingTime: 900 });
     flip.loadFromHTML(pages);
-    flip.on('flip', e => { update(e.data); document.querySelectorAll('#book video').forEach(v => v.pause()); });
+    flip.on('flip', e => { update(e.data); document.querySelectorAll('#book video').forEach(v => v.pause()); schedule(e.data); });
     update(0);
   } else { el.classList.add('fallback'); }
   prevBtn.onclick = () => flip && flip.flipPrev();
   nextBtn.onclick = () => flip && flip.flipNext();
+
+  // ---------- Auto tour: open the book, play each video, turn pages by reading time ----------
+  const WPM = 280, tourBtn = document.getElementById('tour'), soundBtn = document.getElementById('sound');
+  const bar = document.getElementById('progress');
+  let touring = true, soundOn = false, timer = null, raf = null, active = null;
+  function visible(i) {
+    if (i <= 0) return [pages[0]];
+    if (i >= last) return [pages[last]];
+    if (portrait) return [pages[i]];
+    const l = i % 2 === 1 ? i : i - 1;
+    return [pages[l], pages[l + 1]].filter(Boolean);
+  }
+  function readSeconds(list) {
+    const words = list.map(p => (p.innerText || '').trim().split(/\s+/).filter(Boolean).length).reduce((a, b) => a + b, 0);
+    return Math.min(45, Math.max(7, Math.round(words / WPM * 60) + 3));
+  }
+  function clearTour() { clearTimeout(timer); cancelAnimationFrame(raf); if (active) { active.onended = null; } active = null; bar.style.width = '0%'; }
+  function advance() { if (!touring || !flip) return; if (flip.getCurrentPageIndex() >= last) { setTour(false); return; } flip.flipNext(); }
+  function runBar(getFrac) { const tick = () => { bar.style.width = Math.min(100, getFrac() * 100) + '%'; raf = requestAnimationFrame(tick); }; tick(); }
+  function schedule(i) {
+    clearTour();
+    if (!touring) return;
+    const list = visible(i), v = list.map(p => p.querySelector('video')).find(Boolean), secs = readSeconds(list);
+    if (v) {
+      active = v; v.muted = !soundOn;
+      const start = () => { const p = v.play(); if (p && p.catch) p.catch(() => { v.muted = true; v.play().catch(() => {}); }); };
+      setTimeout(start, 900);  // let the page-turn finish first
+      v.onended = () => { timer = setTimeout(advance, 1500); };
+      runBar(() => v.duration ? v.currentTime / v.duration : 0);
+      timer = setTimeout(advance, Math.max(secs, 150) * 1000);  // safety net if a video stalls
+    } else {
+      const t0 = performance.now(), ms = (i === 0 ? 3 : secs) * 1000;
+      runBar(() => (performance.now() - t0) / ms);
+      timer = setTimeout(advance, ms);
+    }
+  }
+  function setTour(on) { touring = on; tourBtn.textContent = on ? 'Pause tour' : 'Resume tour';
+    if (on) schedule(flip ? flip.getCurrentPageIndex() : 0); else { clearTour(); document.querySelectorAll('#book video').forEach(x => x.pause()); } }
+  tourBtn.onclick = () => setTour(!touring);
+  soundBtn.onclick = () => { soundOn = !soundOn; soundBtn.textContent = soundOn ? 'Sound off' : 'Sound on';
+    document.querySelectorAll('#book video').forEach(x => { x.muted = !soundOn; }); if (soundOn && active && active.paused && touring) active.play().catch(() => {}); };
+  // A video the viewer pauses holds the tour; pressing play resumes it.
+  document.querySelectorAll('#book video').forEach(x => x.addEventListener('play', () => { if (!touring) setTour(true); }));
+  if (flip) schedule(0);
   const zoom = document.getElementById('zoom'), zimg = zoom.querySelector('img');
   let lastFocus = null;
   function openZoom(t) { lastFocus = t; zimg.src = t.src; zimg.alt = t.alt; zoom.hidden = false; zoom.focus(); }
